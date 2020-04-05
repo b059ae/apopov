@@ -1,0 +1,145 @@
+@import "~bootstrap/scss/bootstrap-reboot.scss";
+@import "~bootstrap/scss/bootstrap-grid.scss";
+
+// Banner
+.banner-bg {
+    background-color: #383734;
+    background: url("../img/banner__bg.jpg");
+}
+
+.section-bg {
+    background-color: #f7f7f7;
+
+}
+
+// About
+.about {
+    @extend .py-4;
+
+    &__title {
+        @extend .container;
+    }
+
+    &__name {
+        color: $white;
+        font-weight: normal;
+        font-size: $h1-font-size;
+    }
+
+    &__description {
+        font-size: $h2-font-size;
+        color: $white;
+        @extend .pb-3;
+    }
+
+    &__skills {
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+// Nav Buttons
+.nav-buttons {
+    display: flex;
+    @extend .justify-content-end;
+
+    &__link {
+        @extend .button-rounded;
+        @extend .ml-2;
+        font-size: $font-size-lg;
+        color: $gray-900;
+
+        &:hover {
+            color: $gray-700;
+            text-decoration: none;
+        }
+    }
+}
+
+// Portfolio
+.portfolio {
+    &__title {
+        @extend .container;
+        @extend .py-2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__layout {
+        @extend .container;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-item {
+        @extend .my-2;
+
+        &__image {
+
+        }
+    }
+}
+
+// Section
+.section__title {
+    font-size: $h2-font-size;
+    color: $gray-900;
+    margin-bottom: 0;
+}
+
+// Blog
+.blog {
+    &__title {
+        @extend .container;
+        @extend .py-2;
+    }
+
+    &__layout {
+        @extend .container;
+        @extend .pb-2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__footer{
+        text-align: center;
+
+        &__link{
+            border: 1px solid red;
+            border-radius: 50%;
+        }
+    }
+
+    &-item {
+        @extend .my-2;
+        max-width: 547px;
+        background-color: $white;
+
+        &__description {
+            @extend .p-4;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__footer {
+            @extend .px-4;
+            @extend .pb-4;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+// Buttons
+.button-rounded {
+    @extend .px-4;
+    @extend .py-1;
+    border: 1px solid $gray-900;
+    border-radius: 35px;
+}
