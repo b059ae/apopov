@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\View\View;
+
+class HomeController extends Controller
+{
+    /**
+     * Дэшборд
+     *
+     * @return View
+     */
+    public function index(): View
+    {
+        return view('admin.home');
+    }
+}
