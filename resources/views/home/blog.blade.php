@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="col-lg-12 col-sm-12 pt-4 mt-4 text-center">
-                <a href="{{route('posts.index')}}" class="btn btn-primary btn-outline text-color-dark custom-btn-style-2 font-weight-bold custom-border-radius-1 text-uppercase">View All</a>
+                <a href="{{route('blog.index')}}" class="btn btn-primary btn-outline text-color-dark custom-btn-style-2 font-weight-bold custom-border-radius-1 text-uppercase">View All</a>
             </div>
         </div>
     </div>

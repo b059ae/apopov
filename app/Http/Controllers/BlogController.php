@@ -7,7 +7,7 @@ use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class PostController extends Controller
+class BlogController extends Controller
 {
 
     /**
@@ -17,17 +17,17 @@ class PostController extends Controller
     {
         $posts = Post::posted()->paginate(20);
 
-        return view('posts.index', compact('posts'));
+        return view('blog.index', compact('posts'));
     }
 
 
     public function show(string $slug): View
     {
-        $news = Post::where('slug', $slug)->firstOrFail();
+        $post = Post::where('slug', $slug)->firstOrFail();
 
-        SEOMeta::setTitle($news->seo_title);
-        SEOMeta::setDescription($news->seo_description);
+        SEOMeta::setTitle($post->title);
+        SEOMeta::setDescription($post->short_description);
 
-        return view('posts.view', compact('news'));
+        return view('blog.view', compact('post'));
     }
 }

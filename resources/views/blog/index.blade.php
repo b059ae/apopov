@@ -45,7 +45,7 @@
                                                         <a class="item-google-plus text-decoration-none text-uppercase" href="#" title="Share on Google Plus">Google Plus</a>
                                                     </li>
                                                 </ul>--}}
-                                                <a class="text-color-dark font-weight-bold text-uppercase" href="#">Continue reading →</a>
+                                                <a class="text-color-dark font-weight-bold text-uppercase" href="{{route('blog.show', ['slug'=>$post->slug])}}">Continue reading →</a>
                                             </div>
                                         </div>
                                     </div>
